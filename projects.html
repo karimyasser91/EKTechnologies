@@ -59,8 +59,30 @@ and open the template in the editor.
                         <div class="modal-body">
                             <div><input type="text" placeholder="Project Name" /></div>
                             <textarea placeholder="Project Description :"></textarea>
+                            <div class="control-group">
+                                <label class="control-label" for="date01">Starting Date</label>
+                                <div class="controls">
+                                    <input type="text" class="input-xlarge datepicker" id="date01" value="02/16/12">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="date02">Ending Date</label>
+                                <div class="controls">
+                                    <input type="text" class="input-xlarge datepicker" id="date02" value="02/16/12">
+                                </div>
+                            </div> 
+
+                            <div class="control-group">
+                                <label class="control-label" for="fileInput">Upload File</label>
+                                <div class="controls">
+                                    <input class="input-file uniform_on" id="fileInput" type="file">
+                                </div>
+                            </div>  
+
                             <div><input type="text" placeholder="Project Manager Name"/></div>
+                            <div><input type="text" placeholder="Number of People working on it"/></div>
                             <div><input type="text" placeholder="Location"/></div>
+
 
                         </div>
                         <div class="modal-footer">
@@ -73,9 +95,10 @@ and open the template in the editor.
             </div>
 
             <hr style="background: #000">
+            <!-- when we click on any project ,it should show us all the details (brought from the DB) about this project-->
             <ol>
                 <li>
-                    <a href="#">Project A </a>
+                    <a href="projectA.html">Project A </a>
                     <a href="#"><i class="halflings-icon pencil pull-right"></i></a>
                 </li>
                 <li>
