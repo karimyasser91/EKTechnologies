@@ -13,6 +13,7 @@ and open the template in the editor.
         <link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
         <link href="css/swiper.min.css" rel="stylesheet">
+        <link href="css/app-css.css" rel="stylesheet">
         <link id="base-style" href="css/style.css" rel="stylesheet">
 
         <link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
@@ -24,11 +25,51 @@ and open the template in the editor.
         <!-- end: Favicon -->
     </head>
     <body>
-        <div>details zy ely fe Add project</div>
-         <h3>Graphs</h3>
+        <div class="project-details">
+            <p>Project Name is :  </p> <p> Future Kids</p>
+            <br>
+            <p>It is a project that aims at teaching kids in rural communities for free</p>
+            <br>
+            <p>From : </p> <p>  1/11/2015</p>
+            <br>
+            <p>To : </p> <p> 1/11/2016</p>
+            <br>
+            <p>Managed by</p><p>Mr.Vivek</p>
+            <br>
+            <p>Located in: </p> <p>Delhi</p>
+            <br>
+            <button class="edit-project-details">Edit</button>
+        </div>
+
+        <div class="project-input-fields">
+            <form>
+                <div><input type="text" placeholder="Project Name" /></div>
+                <textarea placeholder="Project Description :"></textarea>
+                <div class="form-group">
+                    <!-- from -->
+                    <div class='input-group date' id='datetimepicker6'>
+                        <input type='text' class="form-control" placeholder="Starting Date"/>
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                    <!-- to -->
+                    <div class='input-group date' id='datetimepicker7'>
+                        <input type='text' class="form-control" placeholder="Ending Date"/>
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <div><input type="text" placeholder="Project Manager Name"/></div>
+                <div><input type="text" placeholder="Location"/></div>
+            </form>
+            <button class="done-edit">Done</button>
+        </div>
+        <h3>Graphs</h3>
         <!-- Graphs-->
         <div class="swiper-container" style="margin-top: 30px; border: 1px solid; text-align: center;">
-           
+
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <h3>Metric 1</h3>
@@ -52,11 +93,6 @@ and open the template in the editor.
                     <div class="box">
                         <div class="box-header">
                             <h2><i class="halflings-icon list-alt"></i><span class="break"></span>Chart with points</h2>
-                            <div class="box-icon">
-                                <a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
-                                <a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
-                                <a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
-                            </div>
                         </div>
                         <div class="box-content">
                             <div id="sincos"  class="center" style="height:300px;" ></div>
@@ -128,12 +164,17 @@ and open the template in the editor.
         <!-- Initialize Swiper -->
         <script>
             var swiper = new Swiper('.swiper-container', {
-                loop:true,
+                loop: true,
                 pagination: '.swiper-pagination',
                 paginationClickable: true,
                 nextButton: '.swiper-button-next',
                 prevButton: '.swiper-button-prev',
                 spaceBetween: 30
+            });
+            $(".project-input-fields").hide();
+            $(".edit-project-details").click(function () {
+                $(".project-details").slideUp();
+                $(".project-input-fields").slideDown("slow");
             });
         </script>
 
